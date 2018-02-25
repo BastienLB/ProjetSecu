@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=red]{hyperref}
+\hypersetup{breaklinks=true}
 
 \title{Les objets connectés}
 \author{Bastien \bsc{Labouche}\\Julie \bsc{Lopez}}
@@ -117,7 +118,7 @@
 	\bigbreak	
 	
 	\begin{flushleft}
-		\textbf{Qu'est-ce que BotNet ?} \\
+		\textbf{Qu'est-ce qu'un BotNet ?} \\
 	\end{flushleft}
 	
 	Avant de commencer à parler de la menace des BotNet, il est essentiel de définir ce qu'est un botnet.
@@ -165,8 +166,8 @@
 	
 	\medbreak
 	
-	\textbf{Troisième étape, infection :} L'assaillant peut à ce moment là, si il le désire, se connecter au serveur de rapports et choisir
-	ou non d'infecter la nouvelle victime. Si il choisit de le faire, une image
+	\textbf{Troisième étape, infection :} L'assaillant peut à ce moment là, s'il le désire, se connecter au serveur de rapports et choisir
+	ou non d'infecter la nouvelle victime. S'il choisit de le faire, une image
 	BusyBox\footnote{Logiciel qui implémente un grand nombre de commandes standard sous Unix.} malveillante est envoyée sur la victime. \\
 	La victime fait désormais partie du botnet et commence lui aussi à chercher de nouvelles victimes.
 	
@@ -183,4 +184,30 @@
 	caméra de surveillance super chouette que l'on a placée dans le salon de notre maison et que tout le monde peut nous "surveiller".  
 	
 	\section{Conclusion}
+	
+	Les objets connectés, ces petits appareils ont révolutionnés le WEB tout en lançant le phénomène Big Data. Au moment où j'écris ces
+	lignes ils sont des milliards à être connectés sur l'IoT. Cependant, même si ils nous facilitent la vie au quotidien, ces objets
+	représentent à l'heure actuelle une menace pour la sécurité de nos données et peuvent mettre des vies en danger. En effet, comme cela
+	a été évoqué plus haut, un chercheur en sécurité a réussis à détourner un avion sans même avoir eu à se lever de son siège passager. On
+	retrouve également des appareils de santé connectés à l'IoT. Malgré tout ceci, les constructeurs n'ont toujours pas à cœur de sécuriser
+	leurs produits, et nombre d'entre eux sont mis en ligne sans que leurs propriétaires n'en changent les mots de passe par défauts.\\
+	En résumé, les objets connectés sont une révolution, mais il est impératif de les sécuriser sous peine de créer une faille dans son système
+	ou de voir ses données dérobées, dans le meilleur des cas.
+	
+	\newpage
+	\section{Sources}
+	\begin{itemize}
+		\item \href{https://www.digital.security/en/blog/threats-connected-objects-issues-and-possibilities}{Digital Security}
+		
+		\item \href{https://www.objetconnecte.com/les-objets-connectes-un-risque-de-cybersecurite-majeur-dans-lentreprise-2310/}{objetconnecte.com}
+		
+		\item \href{https://www.objetconnecte.com/fbi-securite-iot-2409/}{objetconnecte.com}
+		\item \href{https://fr.wikipedia.org/wiki/Shodan_%28site_web%29}{Wikipedia}
+		\item \href{https://www.francetvinfo.fr/replay-radio/hyper-revue-de-presse/shodan-le-moteur-de-recherche-qui-se-connecte-a-votre-insu_1762849.html}{Francetvinfo}
+		\item \href{http://objets.insa-rennes.fr/objets-connectes/quest-ce-quun-objet-connecte/}{Insa-rennes}
+		\item \href{https://fr.wikipedia.org/wiki/Internet_des_objets}{Wikipedia}
+		\item \href{https://fr.wikipedia.org/wiki/Botnet#Usages_des_botets}{Wikipedia}
+		\item \href{https://www.sentryo.net/fr/botnet-iot-mirai-menace-cle-en-main-rendue-publique/}{sentryo.net}
+	\end{itemize}
+	
 \end{document}
