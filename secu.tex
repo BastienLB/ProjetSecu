@@ -109,10 +109,70 @@
 	de conséquences pour les passagers). Comment il a fait ? Il a ouvert le boîtier situé sous chaque siège et y a relié son ordinateur via
 	un câble ethernet, obtenant ainsi un accès au système d'information de l'appareil.
 	
-	\newpage	
+	\newpage
 	
 	\section{Pourquoi c'est dangereux}
 	\subsection{BotNet}
+	
+	\bigbreak	
+	
+	\begin{flushleft}
+		\textbf{Qu'est-ce que BotNet ?} \\
+	\end{flushleft}
+	
+	Avant de commencer à parler de la menace des BotNet, il est essentiel de définir ce qu'est un botnet.
+	BotNet, ce nom est formé de "bot" pour robot et "net" pour network (réseau en français), il désignait à l'origine les réseaux de robots
+	IRC mais le terme s'est élargis aux réseaux de machines zombies.
+	
+	\bigbreak
+	
+	À l'origine bienveillants, les botnets servaient à proposer divers services aux usagers de IRC, cependant, leur nature première a été 
+	détournée à des fins malveillantes. Ces botnets malveillants servent aujourd'hui principalement à :
+	\begin{itemize}
+		\item Identifier et infecter d’autres machines par diffusion de virus et de programmes malveillants (malwares).
+		\item Participer à des attaques groupées de déni de service (DDoS).
+		\item Relayer du spam pour du commerce illégal ou pour de la manipulation d'information (par exemple des cours de bourse).
+		\item Réaliser des opérations d'hameçonnage.
+		\item Générer de façon abusive des clics sur un lien publicitaire au sein d’une page web (fraude au clic).
+		\item Exploiter la puissance de calcul des machines ou effectuer des opérations de calcul distribué notamment pour cassage de mots 
+		de passe
+		\item Mener des opérations de commerce illicite en gérant l'accès à des sites de ventes de produits interdits ou de contrefaçons 
+		via des techniques de fast flux, simple ou double-flux ou RockPhish.
+		\item Miner des BitCoins
+	\end{itemize}
+	\href{https://fr.wikipedia.org/wiki/Botnet#Usages_des_botnets}{Source.}
+	\bigbreak
+		
+	Comme vous vous en doutez avec tout ce qui a été dit sur les failles de sécurité, il doit être relativement aisé pour un pirate
+	de se constituer un réseau de botnet grâce aux objets connectés, c'est le cas du fameux botnet "Mirai", ce botnet cible les objets
+	connectés.
+	
+	\bigbreak
+	
+	\begin{flushleft}
+		\textbf{Fonctionnement du botnet Mirai} \\
+	\end{flushleft}
+	
+	\textbf{Première étape, reconnaissance :} Le botnet se propage de machine infectée en machine infectée. Une machine infectée 
+	va tout d'abord générer une adresse IP aléatoire et la soumettre à une liste noire, si elle ne figure pas dans la liste, 
+	la machine zombie va essayer de s'y connecter en essayant divers couples d'identifiants par défaut des constructeurs. On y retrouve 
+	essentiellement des caméras, mais aussi des imprimantes, routeurs ou téléphones de VoIP.
+	
+	\medbreak
+
+	\textbf{Deuxième étape, signalement des victimes potentielles :} Une fois que la machine zombie a pu se connecter grâce à un couple
+	identifiant/mot de passe, elle renvoie toutes les informations relative à la victime à un serveur de rapports.
+	
+	\medbreak
+	
+	\textbf{Troisième étape, infection :} L'assaillant peut à ce moment là, si il le désire, se connecter au serveur de rapports et choisir
+	ou non d'infecter la nouvelle victime. Si il choisit de le faire, une image
+	BusyBox\footnote{Logiciel qui implémente un grand nombre de commandes standard sous Unix.} malveillante est envoyée sur la victime. \\
+	La victime fait désormais partie du botnet et commence lui aussi à chercher de nouvelles victimes.
+	
+	\medbreak
+	A partir de ce réseau, le pirate peut lancer toutes sortes d'attaques, comme des attaques de dénis de service ou de ACK flood.
+	
 	\subsection{Souriez, vous êtes filmés}
 	Les objets connectés sont partout, dans les entreprises comme dans les lieux privés, on pense tous qu'ils nous facilitent la vie, 
 	et c'est vrai. On peut garder un œil sur sa propre maison ou sur les employés, on peut contrôler la température du frigo ou celle 
