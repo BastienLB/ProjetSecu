@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=red]{hyperref}
+\usepackage{graphicx}
 \hypersetup{breaklinks=true}
 
 \title{Les objets connectés}
@@ -112,9 +113,15 @@
 	
 	Par exemple, on peut parler des toilettes Statis distribuées par la firme LIXIL Corporation. Il s'agit de toilettes "intelligentes" contrôlées par une application Android se connectant au toilette en établissant une connexion bluetooth. Le problème ? La toilette a un PIN bluetooth de "0000" codé en brut.
 	\begin{verbatim}
-	BluetoothDevice localBluetoothDevice = BluetoothManager.getInstance().execPairing(paramString, "0000")
+	BluetoothDevice localBluetoothDevice = 
+	BluetoothManager.getInstance().execPairing(paramString, "0000")
 	\end{verbatim}
+	Ce qui fait que quelqu'un ayant l'application peut contrôler n'importe quel toilette si celle-ci est en mode d'appairage. Sinon il est toujours possible de s'appairer avec le toilette en analysant le trafic bluetooth, trouver son adresse matériel pour ensuite procédé à l'appairage.
 	
+	\begin{center}
+		\includegraphics[scale=0.75]{Images/statisToilet.jpg}
+		Toilettes Statis
+	\end{center}
 	
 	\newpage
 	
